@@ -385,7 +385,7 @@
 
   <!-- PAST MATCHUPS -->
   <div class="view" id="v-matches">
-    <div class="bar"><label>Session <select id="mDate"></select></label><label>Student <select id="mWho"></select></label><span id="mNote"></span></div>
+    <div class="bar"><label>Session <select id="mDate"></select></label><label>Student <select id="mWho"></select></label><span id="mNote"></span><div style="flex:1"></div><button class="mini x" id="delSess">Delete this saved session</button></div>
     <div class="tblwrap" id="mWrap"></div>
   </div>
 
@@ -459,7 +459,7 @@
   <div class="mb"><button class="ghost" id="mCancel">Cancel</button><button id="mOk">OK</button></div>
 </div></div>
 
-<script src="config.js?v=2026-11-12c"></script>
+<script src="config.js?v=2026-11-12d"></script>
 <script>
 const API_URL = window.API_URL, ST = window.STATIONS, CLUB = window.CLUB;
 const POLL_MS = 3000;
@@ -1031,6 +1031,9 @@ function renderMatchFilters(){
   $('mDate').value = d || (ss.length?ss[ss.length-1].date:''); $('mWho').value=w;
 }
 $('mDate').onchange=renderMatches; $('mWho').onchange=renderMatches;
+on('delSess', async()=>{ const d=$('mDate').value; if(!d){ await modal('Choose a session','Pick one session in the Session list first.',false); return; }
+  if(!await confirmBox('Delete the saved session of '+niceDate(d)+'?','Its scores leave the all-time totals and its matchups are removed. This cannot be undone.','Delete')) return;
+  const r=await act('delHistory',{date:d}); if(r&&r.ok){ $('mDate').value=''; await loadHistory(); } });
 function renderMatches(){
   const ss=H||[], d=$('mDate').value, w=$('mWho').value, rows=[];
   ss.forEach(s=>{ if(d&&s.date!==d) return; (s.matches||[]).forEach(m=>{ if(w&&m[2]!==w&&m[3]!==w) return; rows.push([s.date].concat(m)); }); });

@@ -165,6 +165,8 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   await board.click('#endBtn'); await modalOk(); await sleep(1500); ok(await board.evaluate(()=>S.status==='ended'&&document.getElementById('podium').classList.contains('show')),'End session & podium');
   await board.click('#closePodium');
   await board.click('[data-tab=totals]'); await sleep(500); ok((await board.textContent('#totWrap')).includes('27 Nov'),'second session in the totals'); await board.screenshot({path:SHOTS+'/board-totals2.png'});
+  await board.click('[data-tab=matches]'); await sleep(400); await board.selectOption('#mDate','2026-11-27'); await board.click('#delSess'); await modalOk(); await sleep(600);
+  await board.click('[data-tab=totals]'); await sleep(500); ok(!(await board.textContent('#totWrap')).includes('27 Nov')&&(await board.textContent('#totWrap')).includes('13 Nov'),'saved session deleted from the totals');
   // passcode change
   await board.click('[data-tab=setup]'); await board.fill('#newPin','club9999'); await board.click('#pinBtn'); await modalOk(); ok(await board.evaluate(()=>pin)==='club9999','passcode changed');
   await board.click('[data-tab=live]'); await board.click('#musicBtn'); ok((await board.textContent('#musicBtn')).includes('off'),'music off button'); await board.click('#musicBtn');

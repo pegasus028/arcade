@@ -58,8 +58,10 @@ for(let N=4;N<=30;N++){
   s=T(be,'end'); ok(s.status==='ended','end');
   const h=g(be,{action:'history'}); ok(h.sessions.length===1&&h.sessions[0].players.length===7&&h.sessions[0].matches.length>=3,'history saved');
   ok(g(be,{action:'names'}).names.length===7,'names kept');
+  T(be,'delHistory',{date:'2026-11-13'}); T(be,'bonus',{name:a,delta:1}); ok(g(be,{action:'history'}).sessions.length===0,'deleted session is not saved again');
+  T(be,'delHistory',{date:'x'}); be.store['H:keep']=JSON.stringify({date:'keep',players:[]});
   s=T(be,'new',{date:'2026-11-27'}); ok(s.status==='lobby'&&s.players.length===0&&s.date==='2026-11-27','new session clears players');
-  ok(g(be,{action:'names'}).names.length===7&&g(be,{action:'history'}).sessions.length===1,'names and history survive');
+  ok(g(be,{action:'names'}).names.length===7&&g(be,{action:'history'}).sessions.length===1,'names and history survive a new session');
   ok(po(be,{action:'report',name:a,epoch:s.epoch-1,r:0,res:'W'}).stale,'stale epoch');
 }
 // 3. session runs out by itself → ended; practice not saved; remove; odd bye points

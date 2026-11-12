@@ -9,7 +9,7 @@
      X:<name>     bonus points given by the teacher
      H:<date>, HM:<date>   archived totals and matchups of a finished session
    Students write only their own P: key, so nobody queues on a lock (only sign-in takes one). */
-var VERSION = '2026-11-12a';
+var VERSION = '2026-11-12b';
 var P = PropertiesService.getScriptProperties();
 var NST = 15, DEFAULT_PIN = 'arcade2026';
 
@@ -123,7 +123,7 @@ function build_(){
   return res;
 }
 function archive_(S, list, matches, all){
-  if (!S.date || S.date === 'practice') return;
+  if (!S.date || S.date === 'practice' || S.noSave) return;
   var pl = list.map(function(s){ return [s.name, s.g, s.pts, s.w, s.t, s.l, s.q, s.bye]; });
   var a = JSON.stringify({date: S.date, players: pl}), m = JSON.stringify(matches);
   if (all['H:' + S.date] !== a) P.setProperty('H:' + S.date, a);
@@ -249,7 +249,9 @@ function teacher_(a, b, now){
   if (a === 'remove') { var pk = 'P:' + k_(b.name), me = J(all[pk], null); if (!me) return {ok: true};
     if (S.status === 'lobby') P.deleteProperty(pk); else { me.x = 1; P.setProperty(pk, JSON.stringify(me)); } return {ok: true}; }
   if (a === 'delName') { var nn = J(all.names, []).filter(function(x){ return x.toLowerCase() !== k_(b.name); }); P.setProperty('names', JSON.stringify(nn)); return {ok: true, noState: true, names: nn}; }
-  if (a === 'delHistory') { P.deleteProperty('H:' + b.date); P.deleteProperty('HM:' + b.date); return {ok: true, noState: true}; }
+  if (a === 'delHistory') { P.deleteProperty('H:' + b.date); P.deleteProperty('HM:' + b.date);
+    if (S.date === b.date && S.status === 'ended') { S.noSave = 1; save(); }   /* or the session still on the board would be saved again */
+    return {ok: true, noState: true}; }
   if (a === 'setPin') { var np = String(b.newPin || '').trim(); if (np.length < 4) return {ok: false, error: 'short'}; P.setProperty('pin', np); return {ok: true, noState: true}; }
   return null;
 }
