@@ -459,7 +459,7 @@
   <div class="mb"><button class="ghost" id="mCancel">Cancel</button><button id="mOk">OK</button></div>
 </div></div>
 
-<script src="config.js?v=2026-11-12b"></script>
+<script src="config.js?v=2026-11-12c"></script>
 <script>
 const API_URL = window.API_URL, ST = window.STATIONS, CLUB = window.CLUB;
 const POLL_MS = 3000;
@@ -497,12 +497,12 @@ const confirmBox=(t,x,ok)=>modal(t,x,false,ok);
 let pin=''; try{ pin=localStorage.getItem('arcade-pin')||''; }catch(e){}
 async function act(action, extra){
   if(!pin){ const p=await modal('Teacher passcode','Enter the passcode to use the controls.',true,'Unlock'); if(!p) return null; pin=String(p).trim(); }
-  let r;
+  let r; const t0=Date.now();
   try{ r=await api('POST',Object.assign({action,pin},extra||{})); }
   catch(e){ setStatus('Could not reach the backend'); return null; }
   if(r&&r.error==='pin'){ pin=''; try{ localStorage.removeItem('arcade-pin'); }catch(e){} await modal('Wrong passcode','That passcode was not accepted. Try the action again.',false); return null; }
   try{ localStorage.setItem('arcade-pin',pin); }catch(e){}
-  if(r&&r.ok&&r.players){ apply(r, Date.now()); }
+  if(r&&r.ok&&r.players){ apply(r, t0, Date.now()); }
   else if(r&&!r.ok){ const msg={few:'At least two students must sign in first.',stations:'Not enough stations are ticked for this many students.',live:'That can only be changed before the session starts.',short:'The passcode needs at least 4 characters.'}[r.error]||'That did not work.';
     await modal('Not done',msg,false); }
   return r;
@@ -572,6 +572,11 @@ function countUp(el, from, to){
 
 /* ---------- live state ---------- */
 let S=null, offset=0, latest=[], prevStatus='';
+let bestRtt=1e9, bestAt=0;
+function setOffset(serverNow,t0,t1){          /* trust the quickest reply: a slow reply makes the clock estimate less exact */
+  const rtt=t1-t0, est=serverNow-(t0+t1)/2;
+  if(rtt<=bestRtt || Date.now()-bestAt>300000 || Math.abs(est-offset)>3000){ bestRtt=rtt; bestAt=Date.now(); offset=est; }
+}
 function now(){ return Date.now()+offset; }
 function phase(){
   if(!S||S.status!=='live') return null;
@@ -580,8 +585,8 @@ function phase(){
   return l.length?{r:l[l.length-1].r,ph:'over',s:t,e:t}:null;
 }
 function rank(list){ return [...list].sort((a,b)=>b.pts-a.pts||b.w-a.w||b.q-a.q||(a.name<b.name?-1:1)); }
-function apply(r, tMid){
-  offset=r.now-tMid; S=r;
+function apply(r, t0, t1){
+  setOffset(r.now,t0,t1); S=r;
   latest=rank(r.players.filter(p=>!p.x||p.pts>0)).map(p=>Object.assign({team:p.name,score:p.pts},p));
   renderBoard(); renderStations(); renderCalls(); renderControls(); if(curTab==='setup') renderSetup(false);
   if(prevStatus==='live'&&S.status==='ended'){ setTimeout(showPodium,900); }
@@ -593,7 +598,7 @@ let podiumEpoch=null;
 function hidePodiumIfStale(){ if(podiumEpoch!==null&&podiumEpoch!==S.epoch){ hidePodium(); podiumEpoch=null; } }
 async function poll(){
   if(!apiReady()){ setStatus('Set API_URL in config.js'); return; }
-  try{ const t0=Date.now(), r=await api('GET'), t1=Date.now(); if(r&&r.ok) apply(r,(t0+t1)/2); }
+  try{ const t0=Date.now(), r=await api('GET'), t1=Date.now(); if(r&&r.ok) apply(r,t0,t1); }
   catch(e){ setStatus('Connection lost — retrying'); }
 }
 function renderBoard(){

@@ -81,8 +81,8 @@
   <div class="foot" id="foot">Satriwithaya · T.Chris</div>
 </div>
 
-<script src="config.js?v=2026-11-12b"></script>
-<script src="questions.js?v=2026-11-12b"></script>
+<script src="config.js?v=2026-11-12c"></script>
+<script src="questions.js?v=2026-11-12c"></script>
 <script>
 const API_URL=window.API_URL, KEY='arcade-v1', ST=window.STATIONS, QB=window.QUESTIONS||{};
 const $=id=>document.getElementById(id);
@@ -102,6 +102,11 @@ function rec(r){ return L.rounds[rk(r)] || (L.rounds[rk(r)]={}); }
 
 /* ---------- live state ---------- */
 let S=null, offset=0, lastOk=0, view='', names=null, joinErr='', joining=false;
+let bestRtt=1e9, bestAt=0;
+function setOffset(serverNow,t0,t1){          /* trust the quickest reply: a slow reply makes the clock estimate less exact */
+  const rtt=t1-t0, est=serverNow-(t0+t1)/2;
+  if(rtt<=bestRtt || Date.now()-bestAt>300000 || Math.abs(est-offset)>3000){ bestRtt=rtt; bestAt=Date.now(); offset=est; }
+}
 function now(){ return Date.now()+offset; }
 function me(){ return S&&L.name ? S.players.find(p=>p.name===L.name) : null; }
 function phase(){                       /* the phase running now, from the timeline the server sent */
@@ -121,7 +126,7 @@ async function poll(){
   if(!API_URL||API_URL.indexOf('PASTE_')===0){ $('app').innerHTML='<div class="card"><h2>Not connected yet</h2><p>The app has no backend address. Tell your teacher.</p></div>'; return; }
   try{
     const t0=Date.now(), r=await api('GET'), t1=Date.now();
-    if(r&&r.ok){ offset=r.now-(t0+t1)/2; S=r; lastOk=Date.now();
+    if(r&&r.ok){ setOffset(r.now,t0,t1); S=r; lastOk=Date.now();
       if(L.name && L.epoch && String(L.epoch)!==String(S.epoch)){ L.epoch=0; L.rounds={}; L.out=[]; save(); }   /* a new session began: sign in again */
       flush(); render(true); }
   }catch(e){}
@@ -154,8 +159,8 @@ async function join(){
   const sel=$('selName').value, name=(sel==='__new'?$('newName').value:sel).replace(/\s+/g,' ').trim();
   if(!name){ $('jerr').textContent= sel==='__new'?'Type your name first.':'Choose your name first.'; return; }
   joining=true; $('joinBtn').disabled=true; $('joinBtn').textContent='Joining…';
-  try{ const r=await api('POST',{action:'register',name});
-    if(r&&r.ok){ L.name=r.me||name; L.epoch=r.epoch; L.rounds={}; L.out=[]; save(); S=r; offset=r.now-Date.now(); joinErr=''; joining=false; view=''; render(true); return; }
+  try{ const t0=Date.now(), r=await api('POST',{action:'register',name}), t1=Date.now();
+    if(r&&r.ok){ L.name=r.me||name; L.epoch=r.epoch; L.rounds={}; L.out=[]; save(); S=r; setOffset(r.now,t0,t1); joinErr=''; joining=false; view=''; render(true); return; }
     joinErr = r&&r.error==='full' ? 'All the stations are full. Tell your teacher.' : 'Could not join. Try again.';
   }catch(e){ joinErr='No connection. Check the wifi and try again.'; }
   joining=false; renderJoin();
