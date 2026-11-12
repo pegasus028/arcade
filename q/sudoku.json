@@ -1,0 +1,167 @@
+[
+ {
+  "id": "sudoku-1a",
+  "lv": 1,
+  "q": "How many squares are in each row of a sudoku?",
+  "key": "nine",
+  "wrong": [
+   "six",
+   "eight",
+   "ten"
+  ]
+ },
+ {
+  "id": "sudoku-1b",
+  "lv": 1,
+  "q": "A sudoku has empty squares. You must ___ them in.",
+  "key": "fill",
+  "wrong": [
+   "cut",
+   "give",
+   "take"
+  ]
+ },
+ {
+  "id": "sudoku-1c",
+  "lv": 1,
+  "q": "In a sudoku, a row goes from left to ___.",
+  "key": "right",
+  "wrong": [
+   "top",
+   "bottom",
+   "middle"
+  ]
+ },
+ {
+  "id": "sudoku-1d",
+  "lv": 1,
+  "q": "What shape is a whole sudoku grid?",
+  "key": "a square",
+  "wrong": [
+   "a circle",
+   "a triangle",
+   "a star"
+  ]
+ },
+ {
+  "id": "sudoku-1e",
+  "lv": 1,
+  "q": "Sudoku is a kind of ___.",
+  "key": "puzzle",
+  "wrong": [
+   "sport",
+   "song",
+   "story"
+  ]
+ },
+ {
+  "id": "sudoku-2a",
+  "lv": 2,
+  "q": "A line of squares going up and down is a ___.",
+  "key": "column",
+  "wrong": [
+   "row",
+   "box",
+   "corner"
+  ]
+ },
+ {
+  "id": "sudoku-2b",
+  "lv": 2,
+  "q": "How many small squares does a standard sudoku have?",
+  "key": "81",
+  "wrong": [
+   "18",
+   "72",
+   "99"
+  ]
+ },
+ {
+  "id": "sudoku-2c",
+  "lv": 2,
+  "q": "In sudoku, each digit can appear only ___ in a row.",
+  "key": "once",
+  "wrong": [
+   "twice",
+   "never",
+   "often"
+  ]
+ },
+ {
+  "id": "sudoku-2d",
+  "lv": 2,
+  "q": "When every square is correct, you have ___ the sudoku.",
+  "key": "solved",
+  "wrong": [
+   "lost",
+   "broken",
+   "missed"
+  ]
+ },
+ {
+  "id": "sudoku-2e",
+  "lv": 2,
+  "q": "The name 'sudoku' comes from which language?",
+  "key": "Japanese",
+  "wrong": [
+   "Chinese",
+   "Korean",
+   "Thai"
+  ]
+ },
+ {
+  "id": "sudoku-3a",
+  "lv": 3,
+  "q": "A good sudoku can be solved by logic, without ___.",
+  "key": "guessing",
+  "wrong": [
+   "thinking",
+   "reasoning",
+   "looking"
+  ]
+ },
+ {
+  "id": "sudoku-3b",
+  "lv": 3,
+  "q": "Those numbers can't go there, so you ___ them out.",
+  "key": "rule",
+  "wrong": [
+   "turn",
+   "give",
+   "hand"
+  ]
+ },
+ {
+  "id": "sudoku-3c",
+  "lv": 3,
+  "q": "A row already has 1 to 8. The empty square needs ___.",
+  "key": "9",
+  "wrong": [
+   "0",
+   "8",
+   "1"
+  ]
+ },
+ {
+  "id": "sudoku-3d",
+  "lv": 3,
+  "q": "Which word means 'going across, from side to side'?",
+  "key": "horizontal",
+  "wrong": [
+   "vertical",
+   "diagonal",
+   "circular"
+  ]
+ },
+ {
+  "id": "sudoku-3e",
+  "lv": 3,
+  "q": "The numbers already printed in the grid at the start are ___.",
+  "key": "clues",
+  "wrong": [
+   "answers",
+   "mistakes",
+   "prizes"
+  ]
+ }
+]

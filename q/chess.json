@@ -1,0 +1,167 @@
+[
+ {
+  "id": "chess-1a",
+  "lv": 1,
+  "q": "What colours are the two sides in chess?",
+  "key": "black and white",
+  "wrong": [
+   "red and blue",
+   "green and yellow",
+   "black and red"
+  ]
+ },
+ {
+  "id": "chess-1b",
+  "lv": 1,
+  "q": "Chess is a game for how many players?",
+  "key": "two",
+  "wrong": [
+   "one",
+   "three",
+   "four"
+  ]
+ },
+ {
+  "id": "chess-1c",
+  "lv": 1,
+  "q": "Which chess piece looks like a horse?",
+  "key": "the knight",
+  "wrong": [
+   "the bishop",
+   "the rook",
+   "the pawn"
+  ]
+ },
+ {
+  "id": "chess-1d",
+  "lv": 1,
+  "q": "Chess is played on a ___.",
+  "key": "board",
+  "wrong": [
+   "field",
+   "court",
+   "map"
+  ]
+ },
+ {
+  "id": "chess-1e",
+  "lv": 1,
+  "q": "Which chess piece is the smallest?",
+  "key": "the pawn",
+  "wrong": [
+   "the king",
+   "the queen",
+   "the rook"
+  ]
+ },
+ {
+  "id": "chess-2a",
+  "lv": 2,
+  "q": "How many squares are on a chessboard?",
+  "key": "64",
+  "wrong": [
+   "36",
+   "48",
+   "100"
+  ]
+ },
+ {
+  "id": "chess-2b",
+  "lv": 2,
+  "q": "How many pieces does each player start with?",
+  "key": "16",
+  "wrong": [
+   "12",
+   "14",
+   "18"
+  ]
+ },
+ {
+  "id": "chess-2c",
+  "lv": 2,
+  "q": "Taking the other player's piece off the board is called ___ it.",
+  "key": "capturing",
+  "wrong": [
+   "checking",
+   "castling",
+   "promoting"
+  ]
+ },
+ {
+  "id": "chess-2d",
+  "lv": 2,
+  "q": "Which piece always moves diagonally?",
+  "key": "the bishop",
+  "wrong": [
+   "the rook",
+   "the knight",
+   "the king"
+  ]
+ },
+ {
+  "id": "chess-2e",
+  "lv": 2,
+  "q": "Which piece is the most powerful?",
+  "key": "the queen",
+  "wrong": [
+   "the pawn",
+   "the rook",
+   "the bishop"
+  ]
+ },
+ {
+  "id": "chess-3a",
+  "lv": 3,
+  "q": "The king is attacked and cannot escape. This is ___.",
+  "key": "checkmate",
+  "wrong": [
+   "stalemate",
+   "castling",
+   "promotion"
+  ]
+ },
+ {
+  "id": "chess-3b",
+  "lv": 3,
+  "q": "Chess is a game of ___, not luck.",
+  "key": "skill",
+  "wrong": [
+   "strength",
+   "chance",
+   "size"
+  ]
+ },
+ {
+  "id": "chess-3c",
+  "lv": 3,
+  "q": "A good player plans several moves ___.",
+  "key": "ahead",
+  "wrong": [
+   "behind",
+   "later",
+   "after"
+  ]
+ },
+ {
+  "id": "chess-3d",
+  "lv": 3,
+  "q": "A game that nobody wins is a ___.",
+  "key": "draw",
+  "wrong": [
+   "loss",
+   "check",
+   "victory"
+  ]
+ },
+ {
+  "id": "chess-3e",
+  "lv": 3,
+  "q": "Which piece looks like a small castle?",
+  "key": "the rook",
+  "wrong": [
+   "the bishop",
+   "the queen",
+   "the pawn"
+  ]
+ }
+]

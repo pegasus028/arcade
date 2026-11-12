@@ -1,0 +1,167 @@
+[
+ {
+  "id": "uno-1a",
+  "lv": 1,
+  "q": "How many cards do you have when you must say \"Uno\"?",
+  "key": "one",
+  "wrong": [
+   "two",
+   "three",
+   "zero"
+  ]
+ },
+ {
+  "id": "uno-1b",
+  "lv": 1,
+  "q": "Which colour is NOT on standard Uno cards?",
+  "key": "brown",
+  "wrong": [
+   "red",
+   "green",
+   "yellow"
+  ]
+ },
+ {
+  "id": "uno-1c",
+  "lv": 1,
+  "q": "The highest number on an Uno number card is ___.",
+  "key": "9",
+  "wrong": [
+   "10",
+   "12",
+   "7"
+  ]
+ },
+ {
+  "id": "uno-1d",
+  "lv": 1,
+  "q": "In Uno, you try to get rid of all your ___.",
+  "key": "cards",
+  "wrong": [
+   "dice",
+   "coins",
+   "points"
+  ]
+ },
+ {
+  "id": "uno-1e",
+  "lv": 1,
+  "q": "What do you usually do when you cannot play a card?",
+  "key": "draw a card",
+  "wrong": [
+   "skip a card",
+   "throw a card",
+   "hide a card"
+  ]
+ },
+ {
+  "id": "uno-2a",
+  "lv": 2,
+  "q": "A Skip card makes the next player ___ her turn.",
+  "key": "miss",
+  "wrong": [
+   "take",
+   "start",
+   "change"
+  ]
+ },
+ {
+  "id": "uno-2b",
+  "lv": 2,
+  "q": "Which card changes the direction of play?",
+  "key": "reverse",
+  "wrong": [
+   "skip",
+   "wild",
+   "draw two"
+  ]
+ },
+ {
+  "id": "uno-2c",
+  "lv": 2,
+  "q": "You ___ the cards to mix them before the game.",
+  "key": "shuffle",
+  "wrong": [
+   "stack",
+   "flip",
+   "count"
+  ]
+ },
+ {
+  "id": "uno-2d",
+  "lv": 2,
+  "q": "A Wild card lets you choose the next ___.",
+  "key": "colour",
+  "wrong": [
+   "player",
+   "number",
+   "direction"
+  ]
+ },
+ {
+  "id": "uno-2e",
+  "lv": 2,
+  "q": "At the start, each player gets ___ cards.",
+  "key": "seven",
+  "wrong": [
+   "five",
+   "six",
+   "ten"
+  ]
+ },
+ {
+  "id": "uno-3a",
+  "lv": 3,
+  "q": "If you're caught not saying \"Uno\", you must ___.",
+  "key": "draw two cards",
+  "wrong": [
+   "miss two turns",
+   "play two cards",
+   "leave the game"
+  ]
+ },
+ {
+  "id": "uno-3b",
+  "lv": 3,
+  "q": "Skip, Draw Two and Wild are all ___ cards.",
+  "key": "action",
+  "wrong": [
+   "lucky",
+   "bonus",
+   "extra"
+  ]
+ },
+ {
+  "id": "uno-3c",
+  "lv": 3,
+  "q": "If you have no good cards, you have a bad ___.",
+  "key": "hand",
+  "wrong": [
+   "deck",
+   "pile",
+   "pack"
+  ]
+ },
+ {
+  "id": "uno-3d",
+  "lv": 3,
+  "q": "\"Mercy\" means showing ___ to someone.",
+  "key": "kindness",
+  "wrong": [
+   "anger",
+   "speed",
+   "fear"
+  ]
+ },
+ {
+  "id": "uno-3e",
+  "lv": 3,
+  "q": "\"I'm on a winning ___!\" means you keep winning.",
+  "key": "streak",
+  "wrong": [
+   "stretch",
+   "street",
+   "string"
+  ]
+ }
+]

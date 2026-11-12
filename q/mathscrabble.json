@@ -1,0 +1,17 @@
+[
+  {"id":"mathscrabble-1a","lv":1,"q":"What is 3 plus 4?","key":"seven","wrong":["six","eight","twelve"]},
+  {"id":"mathscrabble-1b","lv":1,"q":"Which symbol means 'plus'?","key":"+","wrong":["−","×","÷"]},
+  {"id":"mathscrabble-1c","lv":1,"q":"What is 10 minus 4?","key":"six","wrong":["five","four","fourteen"]},
+  {"id":"mathscrabble-1d","lv":1,"q":"In maths, how do you read the symbol '='?","key":"equals","wrong":["plus","minus","times"]},
+  {"id":"mathscrabble-1e","lv":1,"q":"What do we call 1, 2 and 3?","key":"numbers","wrong":["letters","shapes","words"]},
+  {"id":"mathscrabble-2a","lv":2,"q":"Which number is odd?","key":"nine","wrong":["two","four","ten"]},
+  {"id":"mathscrabble-2b","lv":2,"q":"What is 3 times 4?","key":"twelve","wrong":["seven","eleven","fourteen"]},
+  {"id":"mathscrabble-2c","lv":2,"q":"What is 12 divided by 3?","key":"four","wrong":["three","six","nine"]},
+  {"id":"mathscrabble-2d","lv":2,"q":"In 5 + 2 = 7, the number 7 is the ___.","key":"sum","wrong":["difference","remainder","product"]},
+  {"id":"mathscrabble-2e","lv":2,"q":"In math scrabble, every equation you build must be ___.","key":"true","wrong":["long","short","odd"]},
+  {"id":"mathscrabble-3a","lv":3,"q":"Which verb means 'take away' in maths?","key":"subtract","wrong":["multiply","divide","add"]},
+  {"id":"mathscrabble-3b","lv":3,"q":"Multiplying a number by two is called ___ it.","key":"doubling","wrong":["halving","tripling","dividing"]},
+  {"id":"mathscrabble-3c","lv":3,"q":"When you add two odd numbers, the answer is always ___.","key":"even","wrong":["odd","prime","negative"]},
+  {"id":"mathscrabble-3d","lv":3,"q":"What is a quarter of 20?","key":"five","wrong":["four","ten","eighty"]},
+  {"id":"mathscrabble-3e","lv":3,"q":"Which words make this true? 9 ___ 3 = 3","key":"divided by","wrong":["minus","plus","times"]}
+]

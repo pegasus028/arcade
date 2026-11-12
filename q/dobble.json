@@ -1,0 +1,167 @@
+[
+ {
+  "id": "dobble-1a",
+  "lv": 1,
+  "q": "What kind of animal is Hedwig?",
+  "key": "an owl",
+  "wrong": [
+   "a cat",
+   "a toad",
+   "a rat"
+  ]
+ },
+ {
+  "id": "dobble-1b",
+  "lv": 1,
+  "q": "In Dobble, you look for two pictures that are the ___.",
+  "key": "same",
+  "wrong": [
+   "biggest",
+   "smallest",
+   "newest"
+  ]
+ },
+ {
+  "id": "dobble-1c",
+  "lv": 1,
+  "q": "What do players fly on in Quidditch?",
+  "key": "a broom",
+  "wrong": [
+   "a dragon",
+   "a horse",
+   "a carpet"
+  ]
+ },
+ {
+  "id": "dobble-1d",
+  "lv": 1,
+  "q": "Harry Potter is a young ___.",
+  "key": "wizard",
+  "wrong": [
+   "giant",
+   "goblin",
+   "elf"
+  ]
+ },
+ {
+  "id": "dobble-1e",
+  "lv": 1,
+  "q": "Harry's best friends are Ron and ___.",
+  "key": "Hermione",
+  "wrong": [
+   "Luna",
+   "Ginny",
+   "Cho"
+  ]
+ },
+ {
+  "id": "dobble-2a",
+  "lv": 2,
+  "q": "Any two Dobble cards have how many pictures in common?",
+  "key": "one",
+  "wrong": [
+   "two",
+   "three",
+   "four"
+  ]
+ },
+ {
+  "id": "dobble-2b",
+  "lv": 2,
+  "q": "How many houses are there at Hogwarts?",
+  "key": "four",
+  "wrong": [
+   "three",
+   "five",
+   "six"
+  ]
+ },
+ {
+  "id": "dobble-2c",
+  "lv": 2,
+  "q": "Which verb means 'to see or find something quickly'?",
+  "key": "spot",
+  "wrong": [
+   "hide",
+   "miss",
+   "lose"
+  ]
+ },
+ {
+  "id": "dobble-2d",
+  "lv": 2,
+  "q": "Which Hogwarts house is Harry in?",
+  "key": "Gryffindor",
+  "wrong": [
+   "Slytherin",
+   "Hufflepuff",
+   "Ravenclaw"
+  ]
+ },
+ {
+  "id": "dobble-2e",
+  "lv": 2,
+  "q": "The Hogwarts Express is a ___.",
+  "key": "train",
+  "wrong": [
+   "bus",
+   "boat",
+   "plane"
+  ]
+ },
+ {
+  "id": "dobble-3a",
+  "lv": 3,
+  "q": "Ron's family name is ___.",
+  "key": "Weasley",
+  "wrong": [
+   "Malfoy",
+   "Granger",
+   "Lovegood"
+  ]
+ },
+ {
+  "id": "dobble-3b",
+  "lv": 3,
+  "q": "In Quidditch, the Seeker tries to catch the Golden ___.",
+  "key": "Snitch",
+  "wrong": [
+   "Quaffle",
+   "Bludger",
+   "Phoenix"
+  ]
+ },
+ {
+  "id": "dobble-3c",
+  "lv": 3,
+  "q": "You must react fast. Dobble tests your ___.",
+  "key": "reflexes",
+  "wrong": [
+   "patience",
+   "strength",
+   "honesty"
+  ]
+ },
+ {
+  "id": "dobble-3d",
+  "lv": 3,
+  "q": "In Harry Potter, a person with no magic is a ___.",
+  "key": "Muggle",
+  "wrong": [
+   "ghost",
+   "centaur",
+   "house-elf"
+  ]
+ },
+ {
+  "id": "dobble-3e",
+  "lv": 3,
+  "q": "Who is the head of Hogwarts in Harry's first year?",
+  "key": "Dumbledore",
+  "wrong": [
+   "Snape",
+   "Hagrid",
+   "McGonagall"
+  ]
+ }
+]

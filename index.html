@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>The Arcade · Play and Learn club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#1a1410; --paper:#f4ead7; --gold:#c8961e; --green:#2f7d52; --red:#b8442f; --violet:#7a5cc4; --teal:#3a8f8a;
+         --silver:#cfc3a8; --dim:rgba(244,234,215,.6); --line:rgba(244,234,215,.16); }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{font-family:'Space Mono',monospace;background:var(--ink);color:var(--paper);
+       background-image:radial-gradient(circle at 12% 8%,rgba(200,150,30,.2),transparent 45%),radial-gradient(circle at 90% 95%,rgba(47,125,82,.16),transparent 45%);
+       background-attachment:fixed;-webkit-tap-highlight-color:transparent}
+  .wrap{max-width:560px;margin:0 auto;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 32px;min-height:100vh;display:flex;flex-direction:column;gap:12px}
+  header{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .brand .k{font-size:9px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+  .brand h1{font-family:'Fraunces',serif;font-weight:900;font-size:24px;line-height:1}
+  .brand h1 em{font-style:italic;color:var(--gold)}
+  .chips{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  .chip{font-size:11px;border:2px solid var(--line);border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .chip b{font-family:'Fraunces',serif;font-size:15px;color:var(--gold)}
+  .chip.gA{border-color:var(--gold);color:var(--gold)} .chip.gB{border-color:var(--teal);color:#7fd0ca}
+  .card{border:2px solid rgba(200,150,30,.42);border-radius:16px;padding:16px;background:rgba(0,0,0,.28)}
+  .card h2{font-family:'Fraunces',serif;font-weight:900;font-size:22px;line-height:1.15}
+  .card p{font-size:13px;line-height:1.55;color:var(--dim);margin-top:6px}
+  .lab{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+  .clockcard{text-align:center;padding:12px 16px 14px}
+  .clock{font-family:'Fraunces',serif;font-weight:900;font-size:84px;line-height:.95;font-variant-numeric:tabular-nums}
+  .clock.warn{color:var(--gold)} .clock.danger{color:var(--red);animation:pulse .9s infinite}
+  @keyframes pulse{50%{opacity:.45}}
+  .sub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:4px}
+  .station{display:flex;gap:14px;align-items:center}
+  .num{flex:0 0 auto;width:74px;height:74px;border-radius:16px;background:var(--gold);color:var(--ink);font-family:'Fraunces',serif;font-weight:900;font-size:44px;
+       display:flex;align-items:center;justify-content:center;box-shadow:0 0 26px rgba(200,150,30,.4)}
+  .station .g{font-family:'Fraunces',serif;font-weight:900;font-size:24px;line-height:1.1}
+  .station .g::first-letter{text-transform:uppercase}
+  .station .o{font-size:13px;color:var(--dim);margin-top:5px}
+  .station .o b{color:var(--paper);font-size:15px}
+  .next .num{background:transparent;color:var(--gold);border:3px solid var(--gold);box-shadow:none}
+  .go{animation:glow 1.2s ease-in-out infinite}
+  @keyframes glow{50%{box-shadow:0 0 0 4px rgba(200,150,30,.35)}}
+  button{font-family:'Fraunces',serif;font-weight:900;font-size:17px;padding:13px 14px;border:2px solid var(--gold);border-radius:12px;background:var(--gold);color:var(--ink);cursor:pointer;width:100%}
+  button.ghost{background:transparent;color:var(--gold)}
+  button.sm{font-size:13px;padding:8px 10px;width:auto}
+  button:active{transform:translateY(1px)} button:disabled{opacity:.45}
+  .res{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}
+  .res button{padding:14px 4px}
+  .res .w{background:var(--green);border-color:var(--green);color:#fff}
+  .res .t{background:var(--silver);border-color:var(--silver)}
+  .res .l{background:transparent;color:var(--paper);border-color:var(--line)}
+  .link{background:none;border:0;color:var(--dim);font-family:'Space Mono',monospace;font-size:12px;font-weight:400;text-decoration:underline;padding:10px 0 0;width:auto}
+  .said{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:8px;font-size:14px}
+  .said b{font-family:'Fraunces',serif;font-size:19px}
+  .q .stem{font-family:'Fraunces',serif;font-weight:600;font-size:20px;line-height:1.25;margin:8px 0 12px}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .opts button{font-family:'Space Mono',monospace;font-weight:700;font-size:15px;background:rgba(244,234,215,.08);color:var(--paper);border-color:var(--line);min-height:56px}
+  .opts button.right{background:var(--green);border-color:var(--green);color:#fff}
+  .opts button.wrong{background:var(--red);border-color:var(--red);color:#fff}
+  .dots{display:flex;gap:6px;margin-top:2px}
+  .dots i{width:26px;height:6px;border-radius:3px;background:var(--line)} .dots i.y{background:var(--green)} .dots i.n{background:var(--red)} .dots i.c{background:var(--gold)}
+  .lvl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);float:right}
+  select,input[type=text]{width:100%;font-family:'Space Mono',monospace;font-size:17px;padding:13px 12px;border:2px solid var(--gold);border-radius:12px;background:#221a13;color:var(--paper);margin-top:10px}
+  .err{color:#ff9d8a;font-size:12px;margin-top:8px;min-height:15px}
+  .big{font-family:'Fraunces',serif;font-weight:900;font-size:64px;line-height:1;color:var(--gold)}
+  .foot{margin-top:auto;font-size:10px;letter-spacing:.1em;color:rgba(244,234,215,.35);text-align:center}
+  .hide{display:none!important}
+  .banner{border-radius:12px;padding:10px 12px;font-size:13px;background:rgba(184,68,47,.22);border:2px solid var(--red)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="k">Play and Learn club</div><h1>The <em>Arcade</em></h1></div>
+    <div class="chips" id="chips"></div>
+  </header>
+  <div id="app"></div>
+  <div class="foot" id="foot">Satriwithaya · T.Chris</div>
+</div>
+
+<script src="config.js?v=2026-11-12a"></script>
+<script src="questions.js?v=2026-11-12a"></script>
+<script>
+const API_URL=window.API_URL, KEY='arcade-v1', ST=window.STATIONS, QB=window.QUESTIONS||{};
+const $=id=>document.getElementById(id);
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function fmt(ms){ const s=Math.max(0,Math.ceil(ms/1000)); return Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); }
+async function api(method, body, params){
+  let url=API_URL; if(params) url+=(url.indexOf('?')>-1?'&':'?')+params;
+  const o={method,redirect:'follow'}; if(method==='POST'){o.headers={'Content-Type':'text/plain;charset=utf-8'};o.body=JSON.stringify(body);}
+  const r=await fetch(url,o); return r.json();
+}
+/* ---------- saved on this device ---------- */
+let L={name:'',epoch:0,seen:{},rounds:{},out:[]};
+try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s&&typeof s==='object') L=Object.assign(L,s); }catch(e){}
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(L)); }catch(e){} }
+function rk(r){ return L.epoch+':'+r; }
+function rec(r){ return L.rounds[rk(r)] || (L.rounds[rk(r)]={}); }
+
+/* ---------- live state ---------- */
+let S=null, offset=0, lastOk=0, view='', names=null, joinErr='', joining=false;
+function now(){ return Date.now()+offset; }
+function me(){ return S&&L.name ? S.players.find(p=>p.name===L.name) : null; }
+function phase(){                       /* the phase running now, from the timeline the server sent */
+  if(!S||S.status!=='live') return null;
+  const t=now(), l=S.sched||[]; if(S.paused) return l[0]||null;
+  for(const x of l) if(t<x.e) return x;
+  return l.length?{r:l[l.length-1].r,ph:'over',s:t,e:t}:null;
+}
+function hasRound(r){ return (S.sched||[]).some(x=>x.r===r&&x.ph==='play'); }
+function seat(r){                       /* my station and opponent in round r */
+  const m=me(); if(!m) return null;
+  if(S.r===r) return m.st>=0?{st:m.st,opp:m.opp}:null;
+  if(S.r===r-1) return m.nst>=0?{st:m.nst,opp:m.nopp}:null;
+  return undefined;
+}
+async function poll(){
+  if(!API_URL||API_URL.indexOf('PASTE_')===0){ $('app').innerHTML='<div class="card"><h2>Not connected yet</h2><p>The app has no backend address. Tell your teacher.</p></div>'; return; }
+  try{
+    const t0=Date.now(), r=await api('GET'), t1=Date.now();
+    if(r&&r.ok){ offset=r.now-(t0+t1)/2; S=r; lastOk=Date.now();
+      if(L.name && L.epoch && String(L.epoch)!==String(S.epoch)){ L.epoch=0; L.rounds={}; L.out=[]; save(); }   /* a new session began: sign in again */
+      flush(); render(true); }
+  }catch(e){}
+}
+/* ---------- sending my results (kept and retried if the wifi drops) ---------- */
+function send(o){ o.action='report'; o.name=L.name; o.epoch=L.epoch; L.out.push(o); save(); flush(); }
+let flushing=false;
+async function flush(){
+  if(flushing||!L.out.length) return; flushing=true;
+  try{ while(L.out.length){ const o=L.out[0]; if(String(o.epoch)!==String(L.epoch)){ L.out.shift(); continue; }
+        const r=await api('POST',o); if(!r||!r.ok) break; L.out.shift(); save(); if(r.players){ S=Object.assign(S||{},r); } } }catch(e){}
+  flushing=false;
+}
+
+/* ---------- sign in ---------- */
+async function loadNames(){ try{ const r=await api('GET',null,'action=names'); names=(r&&r.names)||[]; }catch(e){ names=names||[]; } if(view==='join') renderJoin(); }
+function renderJoin(){
+  view='join';
+  const opts=(names||[]).map(n=>'<option'+(n===L.name?' selected':'')+'>'+esc(n)+'</option>').join('');
+  $('app').innerHTML='<div class="card"><div class="lab">Sign in</div><h2>Who is playing today?</h2>'+
+    '<select id="selName"><option value="">'+(names?'Choose your name…':'Loading names…')+'</option>'+opts+'<option value="__new">My name is not in the list</option></select>'+
+    '<div id="newBox" class="hide"><input type="text" id="newName" maxlength="24" placeholder="Type your name (e.g. 4/2 Mint)" autocomplete="off"></div>'+
+    '<div class="err" id="jerr">'+esc(joinErr)+'</div><button id="joinBtn">Join the game</button>'+
+    '<p>Your name is saved after the first time, so next week you only choose it from the list.</p></div>';
+  $('selName').onchange=()=>{ $('newBox').classList.toggle('hide',$('selName').value!=='__new'); if($('selName').value==='__new') $('newName').focus(); };
+  $('joinBtn').onclick=join;
+}
+async function join(){
+  if(joining) return;
+  const sel=$('selName').value, name=(sel==='__new'?$('newName').value:sel).replace(/\s+/g,' ').trim();
+  if(!name){ $('jerr').textContent= sel==='__new'?'Type your name first.':'Choose your name first.'; return; }
+  joining=true; $('joinBtn').disabled=true; $('joinBtn').textContent='Joining…';
+  try{ const r=await api('POST',{action:'register',name});
+    if(r&&r.ok){ L.name=r.me||name; L.epoch=r.epoch; L.rounds={}; L.out=[]; save(); S=r; offset=r.now-Date.now(); joinErr=''; joining=false; view=''; render(true); return; }
+    joinErr = r&&r.error==='full' ? 'All the stations are full. Tell your teacher.' : 'Could not join. Try again.';
+  }catch(e){ joinErr='No connection. Check the wifi and try again.'; }
+  joining=false; renderJoin();
+}
+
+/* ---------- questions: one very easy, one easy, one medium, about the game just played ---------- */
+function draw(r,st){
+  const R=rec(r); if(R.qids) return R;
+  const pool=QB[ST[st].id]||[], seen=L.seen[L.name]||(L.seen[L.name]={}); R.qids=[]; R.ans=[];
+  [1,2,3].forEach(lv=>{ let c=pool.filter(q=>q.lv===lv&&!seen[q.id]); if(!c.length){ pool.filter(q=>q.lv===lv).forEach(q=>delete seen[q.id]); c=pool.filter(q=>q.lv===lv); }
+    if(c.length){ const q=c[Math.floor(Math.random()*c.length)]; R.qids.push(q.id); seen[q.id]=1; } });
+  save(); return R;
+}
+function findQ(id){ for(const g in QB){ const q=QB[g].find(x=>x.id===id); if(q) return q; } return null; }
+function qScore(R){ return (R.ans||[]).filter((a,i)=>{ const q=findQ(R.qids[i]); return q&&a===q.a; }).length; }
+function qDone(R){ return R.qids && (R.ans||[]).length>=R.qids.length; }
+function sendQ(r){ const R=rec(r); if(R.qsent||!R.qids||!(R.ans||[]).length) return; R.qsent=1; save(); send({r:r,q:qScore(R)}); }
+const LV=['','Very easy','Easy','Medium'];
+function qHTML(r,st,locked){
+  const R=draw(r,st); if(!R.qids.length) return '';
+  const dots='<div class="dots">'+R.qids.map((id,i)=>{ const q=findQ(id), a=R.ans[i]; return '<i class="'+(a==null?(i===R.ans.length&&!locked?'c':''):(q&&a===q.a?'y':'n'))+'"></i>'; }).join('')+'</div>';
+  if(qDone(R)||locked){ const n=qScore(R);
+    return '<div class="card q"><div class="lab">Bonus questions</div>'+dots+'<div class="said"><span>'+(qDone(R)?'All answered':'Time is up')+'</span><b>+'+(n*2)+' points</b></div></div>'; }
+  const i=R.ans.length, q=findQ(R.qids[i]);
+  return '<div class="card q"><span class="lvl">'+LV[q.lv]+' · 2 points</span><div class="lab">Question '+(i+1)+' of '+R.qids.length+'</div>'+dots+
+    '<div class="stem">'+esc(q.q)+'</div><div class="opts">'+q.o.map((o,k)=>'<button data-q="'+r+'" data-k="'+k+'">'+esc(o)+'</button>').join('')+'</div></div>';
+}
+let qBusy=false;
+function answer(r,k,btn){
+  if(qBusy) return; const R=rec(r), q=findQ(R.qids[R.ans.length]); if(!q) return;
+  qBusy=true; R.ans.push(k); save();
+  btn.parentNode.querySelectorAll('button').forEach((b,i)=>{ b.disabled=true; if(i===q.a) b.classList.add('right'); else if(i===k) b.classList.add('wrong'); b.style.opacity=1; });
+  if(qDone(R)) sendQ(r);
+  setTimeout(()=>{ qBusy=false; render(true); }, k===q.a?650:1300);
+}
+
+/* ---------- result of the game ---------- */
+function resHTML(r,sp,open){
+  const R=rec(r), g=ST[sp.st].name;
+  if(!sp.opp) return '<div class="card"><div class="lab">This round</div><h2>No opponent: +5 points</h2><p>Practise the game, or invite your teacher to play.</p></div>';
+  const flag=(S.flags||[]).some(f=>f.r===r&&(f.a===L.name||f.b===L.name)&&f.type!=='missing');
+  if(R.res||R.ask){
+    const txt=R.ask?'You asked the teacher':({W:'You won',T:'It was a tie',L:'You lost'}[R.res]);
+    return '<div class="card"><div class="lab">Result · '+esc(g)+'</div><div class="said"><b>'+txt+'</b>'+(open?'<button class="sm ghost" data-act="change" data-r="'+r+'">Change</button>':'')+'</div>'+
+      (flag||R.ask?'<p>Your teacher will decide this one. Put your hand up.</p>':'')+'</div>';
+  }
+  if(!open) return '<div class="card"><div class="lab">Result · '+esc(g)+'</div><p>No result was sent in time. Tell your teacher who won.</p></div>';
+  return '<div class="card"><div class="lab">Result</div><h2>Who won against '+esc(sp.opp)+'?</h2>'+
+    '<div class="res"><button class="w" data-res="W" data-r="'+r+'">I won</button><button class="t" data-res="T" data-r="'+r+'">Tie</button><button class="l" data-res="L" data-r="'+r+'">I lost</button></div>'+
+    '<button class="link" data-act="ask" data-r="'+r+'">Not clear who won? Ask the teacher to decide</button></div>';
+}
+function stHTML(sp,label,cls){
+  return '<div class="card '+(cls||'')+'"><div class="lab">'+label+'</div><div class="station" style="margin-top:8px"><div class="num">'+(sp.st+1)+'</div><div>'+
+    '<div class="g">'+esc(ST[sp.st].name)+'</div><div class="o">'+(sp.opp?'You play <b>'+esc(sp.opp)+'</b>':'No opponent this round')+'</div></div></div></div>';
+}
+function clockHTML(lab,sub){ return '<div class="card clockcard"><div class="lab" id="clab">'+lab+'</div><div class="clock" id="clock">--:--</div><div class="sub" id="csub">'+(sub||'')+'</div></div>'; }
+
+/* ---------- main render ---------- */
+let lastKey='';
+function render(force){
+  if(!S) return;
+  const m=me(), p=phase();
+  let chips='';
+  if(m){ chips='<span class="chip g'+m.g+'">Group '+m.g+(m.g==='A'?' ↑':' ↓')+'</span><span class="chip">'+esc(L.name)+' <b>'+m.pts+'</b></span>'; }
+  $('chips').innerHTML=chips;
+  if(!L.name||!L.epoch||!m){
+    if(S.status==='ended'&&!m){ if(view!=='over'||force){ view='over'; $('app').innerHTML='<div class="card"><h2>Today\'s session has finished</h2><p>See you at the next club meeting.</p></div>'; } return; }
+    if(view!=='join'){ renderJoin(); loadNames(); } return;
+  }
+  const key=[S.status,p?p.r+p.ph:'',S.paused,S.r,m.st,m.nst,m.x].join('|');
+  if(!force&&key===lastKey) return; lastKey=key; view='game';
+  let h='';
+  if(m.x){ h='<div class="card"><h2>You are out of today\'s game</h2><p>See your teacher if this is a mistake.</p></div>'; }
+  else if(S.status==='lobby'){
+    h='<div class="card" style="text-align:center"><div class="lab">You are in</div><div class="big" style="margin:8px 0">Group '+m.g+'</div>'+
+      '<p>Group A moves <b>up</b> the station numbers (1 → 2 → 3). Group B moves <b>down</b> (… 3 → 2 → 1).<br>Wait for your teacher to start. '+S.players.length+' students have joined.</p></div>';
+  }
+  else if(S.status==='ended'){
+    const rank=[...S.players].sort((a,b)=>b.pts-a.pts).findIndex(x=>x.name===L.name)+1;
+    const sp=S.r>=0?lastSeat():null, open=(now()-S.endedMs)<170000;
+    h='<div class="card" style="text-align:center"><div class="lab">Session over</div><div class="big" style="margin:8px 0">'+m.pts+'</div><p>points today · place '+rank+' of '+S.players.length+
+      '<br>'+m.w+' wins · '+m.t+' ties · '+m.l+' losses · '+m.q+' from questions</p><p>Look at the big screen for the podium.</p></div>';
+    if(sp&&open&&!(rec(S.r).res||rec(S.r).ask)&&sp.opp) h+=resHTML(S.r,sp,true);
+  }
+  else if(p){
+    const pausedB=S.paused?'<div class="banner">Paused by the teacher</div>':'';
+    if(p.ph==='ready'){
+      const sp=seat(0);
+      h=pausedB+clockHTML('Get ready','Game 1 starts when this reaches 0:00')+(sp?stHTML(sp,'Go to your first station','go'):'<div class="card"><p>Finding your station…</p></div>');
+    }else if(p.ph==='play'){
+      const sp=seat(p.r), R=rec(p.r);
+      if(sp===null){ const nx=seat(p.r+1); h=pausedB+clockHTML('Round '+(p.r+1)+' is being played','')+'<div class="card"><h2>You join in the next round</h2><p>Watch a game while you wait.</p></div>'+(nx?stHTML(nx,'Your first station','next'):''); }
+      else if(sp===undefined){ h=pausedB+clockHTML('Round '+(p.r+1),'')+'<div class="card"><p>Finding your station…</p></div>'; }
+      else{
+        h=pausedB+clockHTML('Round '+(p.r+1)+' of '+S.rounds+' · play','When the time ends, stop and move')+stHTML(sp,'You are at station');
+        if(sp.opp){ if(R.early||R.res||R.ask){ h+=resHTML(p.r,sp,true); if(R.res||R.ask) h+=qHTML(p.r,sp.st,false); }
+                    else h+='<button class="ghost" data-act="early" data-r="'+p.r+'">We finished early</button>'; }
+      }
+    }else if(p.ph==='move'){
+      const sp=seat(p.r)||lastSeat(), nx=hasRound(p.r+1)?seat(p.r+1):null, last=!hasRound(p.r+1);
+      h=pausedB+clockHTML(last?'Last round finished':'Move to your next station','Answer the questions before 0:00');
+      if(nx) h+=stHTML(nx,'Go now to station','next go');
+      else if(last) h+='<div class="card"><h2>That was the last game</h2><p>Send your result, answer the questions, then watch the big screen for the podium.</p></div>';
+      if(sp){ h+=resHTML(p.r,sp,true)+qHTML(p.r,sp.st,false); }
+    }else{ h=clockHTML('Finishing…','')+'<div class="card"><p>Counting the scores…</p></div>'; }
+  }
+  $('app').innerHTML=h; tick();
+}
+let seatMemo={};
+function lastSeat(){ return seatMemo[rk(S.r)]||null; }
+function remember(){ if(!S||S.status==='lobby') return; const m=me(); if(m&&m.st>=0) seatMemo[rk(S.r)]={st:m.st,opp:m.opp}; }
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b||!S) return;
+  const r=Number(b.dataset.r);
+  if(b.dataset.res){ const R=rec(r); R.res=b.dataset.res; delete R.ask; save(); send({r:r,res:R.res}); render(true); }
+  else if(b.dataset.act==='ask'){ const R=rec(r); R.ask=1; delete R.res; save(); send({r:r,ask:1}); render(true); }
+  else if(b.dataset.act==='change'){ const R=rec(r); delete R.res; delete R.ask; R.early=1; save(); render(true); }
+  else if(b.dataset.act==='early'){ rec(r).early=1; save(); render(true); }
+  else if(b.dataset.q!=null){ answer(Number(b.dataset.q),Number(b.dataset.k),b); }
+});
+
+/* ---------- clock: counts down on this device, corrected to the server's time ---------- */
+let lastPhase='';
+function tick(){
+  if(!S) return; remember();
+  const p=phase(), c=$('clock');
+  const pk=S.status+(p?p.r+p.ph:'');
+  if(pk!==lastPhase){
+    const prev=lastPhase; lastPhase=pk;
+    if(prev){ const mm=/^live(-?\d+)move$/.exec(prev); if(mm) sendQ(Number(mm[1]));           /* move time over: send what was answered */
+              setTimeout(poll, 300+Math.random()*1700); render(true); return; }
+  }
+  if(c&&p){ const rem=S.paused?(p.e-S.now):(p.e-now()); c.textContent=fmt(rem); const s=Math.ceil(rem/1000);
+    c.className='clock'+(s<=30&&p.ph==='play'?' danger':s<=10?' danger':s<60&&p.ph==='play'?' warn':'');
+    const sub=$('csub'); if(sub&&S.endMs&&p.ph==='play') sub.textContent='Session time left '+fmt(S.paused?S.endMs-S.now:S.endMs-now()); }
+  $('foot').textContent = lastOk&&Date.now()-lastOk>20000 ? 'Connection lost — trying again…' : 'Satriwithaya · T.Chris';
+}
+setInterval(tick,250);
+(function loop(){ poll().finally(()=>setTimeout(loop, !S||S.status==='lobby'?4000:6000)); })();
+
+document.addEventListener('visibilitychange',()=>{ if(!document.hidden) poll(); });
+</script>
+</body>
+</html>

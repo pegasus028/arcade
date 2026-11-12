@@ -1,0 +1,167 @@
+[
+ {
+  "id": "pool-1a",
+  "lv": 1,
+  "q": "What do you hit the balls with in pool?",
+  "key": "a cue",
+  "wrong": [
+   "a bat",
+   "a racket",
+   "a club"
+  ]
+ },
+ {
+  "id": "pool-1b",
+  "lv": 1,
+  "q": "What colour is the 8 ball?",
+  "key": "black",
+  "wrong": [
+   "white",
+   "red",
+   "blue"
+  ]
+ },
+ {
+  "id": "pool-1c",
+  "lv": 1,
+  "q": "In pool, which ball do you hit with your stick?",
+  "key": "the white ball",
+  "wrong": [
+   "the black ball",
+   "the red ball",
+   "the yellow ball"
+  ]
+ },
+ {
+  "id": "pool-1d",
+  "lv": 1,
+  "q": "A pool table is usually covered in green ___.",
+  "key": "cloth",
+  "wrong": [
+   "paper",
+   "glass",
+   "plastic"
+  ]
+ },
+ {
+  "id": "pool-1e",
+  "lv": 1,
+  "q": "The holes on a pool table are called ___.",
+  "key": "pockets",
+  "wrong": [
+   "boxes",
+   "bags",
+   "cups"
+  ]
+ },
+ {
+  "id": "pool-2a",
+  "lv": 2,
+  "q": "Most pool tables have how many pockets?",
+  "key": "six",
+  "wrong": [
+   "four",
+   "eight",
+   "five"
+  ]
+ },
+ {
+  "id": "pool-2b",
+  "lv": 2,
+  "q": "You put chalk on the ___ of the cue.",
+  "key": "tip",
+  "wrong": [
+   "handle",
+   "middle",
+   "side"
+  ]
+ },
+ {
+  "id": "pool-2c",
+  "lv": 2,
+  "q": "A ball hits the side of the table and comes back. It ___.",
+  "key": "bounces",
+  "wrong": [
+   "breaks",
+   "sinks",
+   "stops"
+  ]
+ },
+ {
+  "id": "pool-2d",
+  "lv": 2,
+  "q": "To ___ means to point carefully at what you want to hit.",
+  "key": "aim",
+  "wrong": [
+   "miss",
+   "pot",
+   "drop"
+  ]
+ },
+ {
+  "id": "pool-2e",
+  "lv": 2,
+  "q": "The first shot, which spreads the balls, is called the ___.",
+  "key": "break",
+  "wrong": [
+   "push",
+   "kick",
+   "serve"
+  ]
+ },
+ {
+  "id": "pool-3a",
+  "lv": 3,
+  "q": "In pool, to \"pot\" a ball means to ___.",
+  "key": "sink it",
+  "wrong": [
+   "miss it",
+   "touch it",
+   "stop it"
+  ]
+ },
+ {
+  "id": "pool-3b",
+  "lv": 3,
+  "q": "In many pool games, players use solids and ___.",
+  "key": "stripes",
+  "wrong": [
+   "stars",
+   "squares",
+   "checks"
+  ]
+ },
+ {
+  "id": "pool-3c",
+  "lv": 3,
+  "q": "In 8-ball, you must pot the 8 ball ___.",
+  "key": "last",
+  "wrong": [
+   "first",
+   "second",
+   "any time"
+  ]
+ },
+ {
+  "id": "pool-3d",
+  "lv": 3,
+  "q": "Which game is like pool but uses many red balls?",
+  "key": "snooker",
+  "wrong": [
+   "golf",
+   "bowling",
+   "croquet"
+  ]
+ },
+ {
+  "id": "pool-3e",
+  "lv": 3,
+  "q": "Breaking a rule in pool is called a ___.",
+  "key": "foul",
+  "wrong": [
+   "goal",
+   "score",
+   "strike"
+  ]
+ }
+]

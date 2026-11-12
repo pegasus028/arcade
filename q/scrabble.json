@@ -1,0 +1,167 @@
+[
+ {
+  "id": "scrabble-1a",
+  "lv": 1,
+  "q": "Scrabble tiles are ___ in shape.",
+  "key": "square",
+  "wrong": [
+   "round",
+   "oval",
+   "triangular"
+  ]
+ },
+ {
+  "id": "scrabble-1b",
+  "lv": 1,
+  "q": "How many letters are in the word \"GAME\"?",
+  "key": "four",
+  "wrong": [
+   "three",
+   "five",
+   "six"
+  ]
+ },
+ {
+  "id": "scrabble-1c",
+  "lv": 1,
+  "q": "In Scrabble, you make ___ with letter tiles.",
+  "key": "words",
+  "wrong": [
+   "shapes",
+   "pictures",
+   "stories"
+  ]
+ },
+ {
+  "id": "scrabble-1d",
+  "lv": 1,
+  "q": "Which of these letters is a vowel?",
+  "key": "o",
+  "wrong": [
+   "b",
+   "t",
+   "k"
+  ]
+ },
+ {
+  "id": "scrabble-1e",
+  "lv": 1,
+  "q": "Which word can you make with the tiles C, A and T?",
+  "key": "cat",
+  "wrong": [
+   "car",
+   "cut",
+   "hat"
+  ]
+ },
+ {
+  "id": "scrabble-2a",
+  "lv": 2,
+  "q": "Which word is spelled correctly?",
+  "key": "because",
+  "wrong": [
+   "becuase",
+   "becouse",
+   "beacuse"
+  ]
+ },
+ {
+  "id": "scrabble-2b",
+  "lv": 2,
+  "q": "You usually take new tiles from a ___ without looking.",
+  "key": "bag",
+  "wrong": [
+   "box",
+   "cup",
+   "bowl"
+  ]
+ },
+ {
+  "id": "scrabble-2c",
+  "lv": 2,
+  "q": "In Scrabble, each player has how many tiles on her rack?",
+  "key": "seven",
+  "wrong": [
+   "six",
+   "eight",
+   "ten"
+  ]
+ },
+ {
+  "id": "scrabble-2d",
+  "lv": 2,
+  "q": "All your points added together make your ___.",
+  "key": "score",
+  "wrong": [
+   "turn",
+   "rack",
+   "word"
+  ]
+ },
+ {
+  "id": "scrabble-2e",
+  "lv": 2,
+  "q": "Which word is the opposite of \"win\"?",
+  "key": "lose",
+  "wrong": [
+   "loose",
+   "lift",
+   "leave"
+  ]
+ },
+ {
+  "id": "scrabble-3a",
+  "lv": 3,
+  "q": "Which word has exactly the same letters as \"listen\"?",
+  "key": "silent",
+  "wrong": [
+   "lesson",
+   "listed",
+   "tilted"
+  ]
+ },
+ {
+  "id": "scrabble-3b",
+  "lv": 3,
+  "q": "In English Scrabble, which letter tile is worth only one point?",
+  "key": "e",
+  "wrong": [
+   "q",
+   "z",
+   "x"
+  ]
+ },
+ {
+  "id": "scrabble-3c",
+  "lv": 3,
+  "q": "Which spelling is correct?",
+  "key": "necessary",
+  "wrong": [
+   "neccessary",
+   "necessery",
+   "nessecary"
+  ]
+ },
+ {
+  "id": "scrabble-3d",
+  "lv": 3,
+  "q": "Which word is a noun?",
+  "key": "happiness",
+  "wrong": [
+   "happy",
+   "happily",
+   "happen"
+  ]
+ },
+ {
+  "id": "scrabble-3e",
+  "lv": 3,
+  "q": "A blank Scrabble tile can stand for ___.",
+  "key": "any letter",
+  "wrong": [
+   "two letters",
+   "only vowels",
+   "no letter"
+  ]
+ }
+]

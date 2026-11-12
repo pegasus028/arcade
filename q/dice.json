@@ -1,0 +1,167 @@
+[
+ {
+  "id": "dice-1a",
+  "lv": 1,
+  "q": "How many sides does a normal dice have?",
+  "key": "six",
+  "wrong": [
+   "four",
+   "five",
+   "eight"
+  ]
+ },
+ {
+  "id": "dice-1b",
+  "lv": 1,
+  "q": "Two plus three equals ___.",
+  "key": "five",
+  "wrong": [
+   "four",
+   "six",
+   "seven"
+  ]
+ },
+ {
+  "id": "dice-1c",
+  "lv": 1,
+  "q": "Which number comes after nine?",
+  "key": "ten",
+  "wrong": [
+   "eight",
+   "eleven",
+   "nineteen"
+  ]
+ },
+ {
+  "id": "dice-1d",
+  "lv": 1,
+  "q": "Which number is between seven and nine?",
+  "key": "eight",
+  "wrong": [
+   "six",
+   "ten",
+   "three"
+  ]
+ },
+ {
+  "id": "dice-1e",
+  "lv": 1,
+  "q": "What shape is a normal dice?",
+  "key": "a cube",
+  "wrong": [
+   "a ball",
+   "a pyramid",
+   "a circle"
+  ]
+ },
+ {
+  "id": "dice-2a",
+  "lv": 2,
+  "q": "You ___ the dice, then flip down your numbers.",
+  "key": "roll",
+  "wrong": [
+   "kick",
+   "pour",
+   "fold"
+  ]
+ },
+ {
+  "id": "dice-2b",
+  "lv": 2,
+  "q": "With two normal dice, what is the highest total?",
+  "key": "twelve",
+  "wrong": [
+   "ten",
+   "eleven",
+   "six"
+  ]
+ },
+ {
+  "id": "dice-2c",
+  "lv": 2,
+  "q": "\"It's your ___ now. Off you go!\"",
+  "key": "turn",
+  "wrong": [
+   "line",
+   "place",
+   "way"
+  ]
+ },
+ {
+  "id": "dice-2d",
+  "lv": 2,
+  "q": "Winning by chance, not by skill, is called ___.",
+  "key": "luck",
+  "wrong": [
+   "work",
+   "help",
+   "rule"
+  ]
+ },
+ {
+  "id": "dice-2e",
+  "lv": 2,
+  "q": "Which number is even?",
+  "key": "four",
+  "wrong": [
+   "three",
+   "five",
+   "seven"
+  ]
+ },
+ {
+  "id": "dice-3a",
+  "lv": 3,
+  "q": "Opposite sides of a normal dice add up to ___.",
+  "key": "seven",
+  "wrong": [
+   "six",
+   "eight",
+   "twelve"
+  ]
+ },
+ {
+  "id": "dice-3b",
+  "lv": 3,
+  "q": "To \"count down\" means to count ___.",
+  "key": "backwards",
+  "wrong": [
+   "forwards",
+   "in pairs",
+   "silently"
+  ]
+ },
+ {
+  "id": "dice-3c",
+  "lv": 3,
+  "q": "If you get a double, both dice show the ___ number.",
+  "key": "same",
+  "wrong": [
+   "next",
+   "biggest",
+   "lowest"
+  ]
+ },
+ {
+  "id": "dice-3d",
+  "lv": 3,
+  "q": "Dice rolls are ___: nobody knows what comes next.",
+  "key": "random",
+  "wrong": [
+   "regular",
+   "fixed",
+   "equal"
+  ]
+ },
+ {
+  "id": "dice-3e",
+  "lv": 3,
+  "q": "We say \"fingers ___\" when we hope for something good.",
+  "key": "crossed",
+  "wrong": [
+   "closed",
+   "folded",
+   "pointed"
+  ]
+ }
+]

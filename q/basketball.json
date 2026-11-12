@@ -1,0 +1,167 @@
+[
+ {
+  "id": "basketball-1a",
+  "lv": 1,
+  "q": "In basketball, you throw the ball through the ___.",
+  "key": "hoop",
+  "wrong": [
+   "gate",
+   "door",
+   "box"
+  ]
+ },
+ {
+  "id": "basketball-1b",
+  "lv": 1,
+  "q": "What shape is a basketball?",
+  "key": "round",
+  "wrong": [
+   "square",
+   "flat",
+   "oval"
+  ]
+ },
+ {
+  "id": "basketball-1c",
+  "lv": 1,
+  "q": "A table basketball is ___ than a real one.",
+  "key": "smaller",
+  "wrong": [
+   "bigger",
+   "heavier",
+   "taller"
+  ]
+ },
+ {
+  "id": "basketball-1d",
+  "lv": 1,
+  "q": "How many teams play in one basketball game?",
+  "key": "two",
+  "wrong": [
+   "one",
+   "three",
+   "four"
+  ]
+ },
+ {
+  "id": "basketball-1e",
+  "lv": 1,
+  "q": "When the ball goes in, you get ___.",
+  "key": "points",
+  "wrong": [
+   "cards",
+   "stars",
+   "coins"
+  ]
+ },
+ {
+  "id": "basketball-2a",
+  "lv": 2,
+  "q": "Players ___ the ball on the floor as they run.",
+  "key": "bounce",
+  "wrong": [
+   "kick",
+   "roll",
+   "throw"
+  ]
+ },
+ {
+  "id": "basketball-2b",
+  "lv": 2,
+  "q": "Which word means 'point the ball at the target'?",
+  "key": "aim",
+  "wrong": [
+   "pass",
+   "catch",
+   "drop"
+  ]
+ },
+ {
+  "id": "basketball-2c",
+  "lv": 2,
+  "q": "If the ball does not go in, you ___.",
+  "key": "miss",
+  "wrong": [
+   "score",
+   "win",
+   "hit"
+  ]
+ },
+ {
+  "id": "basketball-2d",
+  "lv": 2,
+  "q": "How many players from each team are on the court?",
+  "key": "five",
+  "wrong": [
+   "four",
+   "six",
+   "eleven"
+  ]
+ },
+ {
+  "id": "basketball-2e",
+  "lv": 2,
+  "q": "Throwing the ball to a teammate is called a ___.",
+  "key": "pass",
+  "wrong": [
+   "shot",
+   "foul",
+   "rebound"
+  ]
+ },
+ {
+  "id": "basketball-3a",
+  "lv": 3,
+  "q": "In basketball, a shot from outside the arc scores ___ points.",
+  "key": "three",
+  "wrong": [
+   "two",
+   "four",
+   "five"
+  ]
+ },
+ {
+  "id": "basketball-3b",
+  "lv": 3,
+  "q": "Jumping and pushing the ball down into the hoop is a ___.",
+  "key": "slam dunk",
+  "wrong": [
+   "free kick",
+   "home run",
+   "hat-trick"
+  ]
+ },
+ {
+  "id": "basketball-3c",
+  "lv": 3,
+  "q": "After a foul, a player may take a ___ throw.",
+  "key": "free",
+  "wrong": [
+   "long",
+   "quick",
+   "high"
+  ]
+ },
+ {
+  "id": "basketball-3d",
+  "lv": 3,
+  "q": "In basketball, players are not allowed to ___ the ball.",
+  "key": "kick",
+  "wrong": [
+   "pass",
+   "throw",
+   "catch"
+  ]
+ },
+ {
+  "id": "basketball-3e",
+  "lv": 3,
+  "q": "To ___ a shot means to stop it with your hand.",
+  "key": "block",
+  "wrong": [
+   "drop",
+   "shoot",
+   "score"
+  ]
+ }
+]

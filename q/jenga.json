@@ -1,0 +1,167 @@
+[
+ {
+  "id": "jenga-1a",
+  "lv": 1,
+  "q": "What are Jenga blocks made of?",
+  "key": "wood",
+  "wrong": [
+   "plastic",
+   "glass",
+   "metal"
+  ]
+ },
+ {
+  "id": "jenga-1b",
+  "lv": 1,
+  "q": "What do you build with Jenga blocks?",
+  "key": "a tower",
+  "wrong": [
+   "a bridge",
+   "a house",
+   "a wall"
+  ]
+ },
+ {
+  "id": "jenga-1c",
+  "lv": 1,
+  "q": "When the tower falls, the game is ___.",
+  "key": "over",
+  "wrong": [
+   "open",
+   "new",
+   "early"
+  ]
+ },
+ {
+  "id": "jenga-1d",
+  "lv": 1,
+  "q": "How many blocks do you take out on each turn?",
+  "key": "one",
+  "wrong": [
+   "two",
+   "three",
+   "four"
+  ]
+ },
+ {
+  "id": "jenga-1e",
+  "lv": 1,
+  "q": "Where do you put the block you take out?",
+  "key": "on top",
+  "wrong": [
+   "on the floor",
+   "in a box",
+   "at the bottom"
+  ]
+ },
+ {
+  "id": "jenga-2a",
+  "lv": 2,
+  "q": "At the start, each row of the tower has how many blocks?",
+  "key": "three",
+  "wrong": [
+   "two",
+   "four",
+   "five"
+  ]
+ },
+ {
+  "id": "jenga-2b",
+  "lv": 2,
+  "q": "Which verb means put things on top of each other?",
+  "key": "stack",
+  "wrong": [
+   "shuffle",
+   "roll",
+   "throw"
+  ]
+ },
+ {
+  "id": "jenga-2c",
+  "lv": 2,
+  "q": "If the tower falls on your turn, you ___.",
+  "key": "lose",
+  "wrong": [
+   "win",
+   "score",
+   "draw"
+  ]
+ },
+ {
+  "id": "jenga-2d",
+  "lv": 2,
+  "q": "You ___ a block out with one finger.",
+  "key": "push",
+  "wrong": [
+   "drop",
+   "throw",
+   "kick"
+  ]
+ },
+ {
+  "id": "jenga-2e",
+  "lv": 2,
+  "q": "Which word means move a little from side to side?",
+  "key": "wobble",
+  "wrong": [
+   "jump",
+   "spin",
+   "tumble"
+  ]
+ },
+ {
+  "id": "jenga-3a",
+  "lv": 3,
+  "q": "Move slowly so the tower doesn't lose its ___.",
+  "key": "balance",
+  "wrong": [
+   "weight",
+   "height",
+   "pattern"
+  ]
+ },
+ {
+  "id": "jenga-3b",
+  "lv": 3,
+  "q": "Which word means 'very careful to avoid danger'?",
+  "key": "cautious",
+  "wrong": [
+   "curious",
+   "careless",
+   "generous"
+  ]
+ },
+ {
+  "id": "jenga-3c",
+  "lv": 3,
+  "q": "A ___ hand is a hand that does not shake.",
+  "key": "steady",
+  "wrong": [
+   "heavy",
+   "quick",
+   "nervous"
+  ]
+ },
+ {
+  "id": "jenga-3d",
+  "lv": 3,
+  "q": "The higher the tower gets, the more ___ it becomes.",
+  "key": "unstable",
+  "wrong": [
+   "solid",
+   "balanced",
+   "strong"
+  ]
+ },
+ {
+  "id": "jenga-3e",
+  "lv": 3,
+  "q": "The tower suddenly ___ with a loud crash.",
+  "key": "collapsed",
+  "wrong": [
+   "collected",
+   "corrected",
+   "connected"
+  ]
+ }
+]

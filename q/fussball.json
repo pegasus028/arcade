@@ -1,0 +1,167 @@
+[
+ {
+  "id": "fussball-1a",
+  "lv": 1,
+  "q": "What do you hit in mini fussball?",
+  "key": "the ball",
+  "wrong": [
+   "the puck",
+   "the dice",
+   "the card"
+  ]
+ },
+ {
+  "id": "fussball-1b",
+  "lv": 1,
+  "q": "In a 1 v 1 game, how many people play?",
+  "key": "two",
+  "wrong": [
+   "one",
+   "three",
+   "four"
+  ]
+ },
+ {
+  "id": "fussball-1c",
+  "lv": 1,
+  "q": "In football, you score by getting the ball into the ___.",
+  "key": "goal",
+  "wrong": [
+   "basket",
+   "ring",
+   "bag"
+  ]
+ },
+ {
+  "id": "fussball-1d",
+  "lv": 1,
+  "q": "What shape is a football?",
+  "key": "round",
+  "wrong": [
+   "square",
+   "flat",
+   "triangular"
+  ]
+ },
+ {
+  "id": "fussball-1e",
+  "lv": 1,
+  "q": "What colour is a football pitch usually?",
+  "key": "green",
+  "wrong": [
+   "blue",
+   "red",
+   "yellow"
+  ]
+ },
+ {
+  "id": "fussball-2a",
+  "lv": 2,
+  "q": "Which verb means hit the ball with your foot?",
+  "key": "kick",
+  "wrong": [
+   "throw",
+   "catch",
+   "bounce"
+  ]
+ },
+ {
+  "id": "fussball-2b",
+  "lv": 2,
+  "q": "How many players does a real football team have on the pitch?",
+  "key": "eleven",
+  "wrong": [
+   "nine",
+   "ten",
+   "twelve"
+  ]
+ },
+ {
+  "id": "fussball-2c",
+  "lv": 2,
+  "q": "The player who guards the net is the ___.",
+  "key": "goalkeeper",
+  "wrong": [
+   "referee",
+   "captain",
+   "coach"
+  ]
+ },
+ {
+  "id": "fussball-2d",
+  "lv": 2,
+  "q": "'Fussball' is a German word. What does it mean?",
+  "key": "football",
+  "wrong": [
+   "handball",
+   "basketball",
+   "volleyball"
+  ]
+ },
+ {
+  "id": "fussball-2e",
+  "lv": 2,
+  "q": "When both sides score the same, the result is a ___.",
+  "key": "draw",
+  "wrong": [
+   "win",
+   "loss",
+   "foul"
+  ]
+ },
+ {
+  "id": "fussball-3a",
+  "lv": 3,
+  "q": "The referee blows a ___ to stop the game.",
+  "key": "whistle",
+  "wrong": [
+   "horn",
+   "bell",
+   "drum"
+  ]
+ },
+ {
+  "id": "fussball-3b",
+  "lv": 3,
+  "q": "How often is the men's FIFA World Cup held?",
+  "key": "every four years",
+  "wrong": [
+   "every year",
+   "every two years",
+   "every three years"
+  ]
+ },
+ {
+  "id": "fussball-3c",
+  "lv": 3,
+  "q": "Which word means a player whose main job is scoring goals?",
+  "key": "striker",
+  "wrong": [
+   "defender",
+   "midfielder",
+   "manager"
+  ]
+ },
+ {
+  "id": "fussball-3d",
+  "lv": 3,
+  "q": "In a professional football match, how long is each half?",
+  "key": "45 minutes",
+  "wrong": [
+   "30 minutes",
+   "40 minutes",
+   "60 minutes"
+  ]
+ },
+ {
+  "id": "fussball-3e",
+  "lv": 3,
+  "q": "Hitting the ball to a player on your team is a ___.",
+  "key": "pass",
+  "wrong": [
+   "shot",
+   "save",
+   "foul"
+  ]
+ }
+]

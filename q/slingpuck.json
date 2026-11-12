@@ -1,0 +1,167 @@
+[
+ {
+  "id": "slingpuck-1a",
+  "lv": 1,
+  "q": "In sling puck, the pucks are made of ___.",
+  "key": "wood",
+  "wrong": [
+   "glass",
+   "metal",
+   "paper"
+  ]
+ },
+ {
+  "id": "slingpuck-1b",
+  "lv": 1,
+  "q": "How many players play one game of sling puck?",
+  "key": "two",
+  "wrong": [
+   "three",
+   "four",
+   "six"
+  ]
+ },
+ {
+  "id": "slingpuck-1c",
+  "lv": 1,
+  "q": "A puck is small, round and ___.",
+  "key": "flat",
+  "wrong": [
+   "square",
+   "tall",
+   "long"
+  ]
+ },
+ {
+  "id": "slingpuck-1d",
+  "lv": 1,
+  "q": "The puck must go through a small ___ in the middle.",
+  "key": "gap",
+  "wrong": [
+   "ring",
+   "cup",
+   "box"
+  ]
+ },
+ {
+  "id": "slingpuck-1e",
+  "lv": 1,
+  "q": "To win, you must ___ all your pucks to the other side.",
+  "key": "send",
+  "wrong": [
+   "keep",
+   "hold",
+   "hide"
+  ]
+ },
+ {
+  "id": "slingpuck-2a",
+  "lv": 2,
+  "q": "To ___ something is to hit it quickly with your finger.",
+  "key": "flick",
+  "wrong": [
+   "kick",
+   "throw",
+   "catch"
+  ]
+ },
+ {
+  "id": "slingpuck-2b",
+  "lv": 2,
+  "q": "Pull the band back, then ___ go.",
+  "key": "let",
+  "wrong": [
+   "make",
+   "get",
+   "have"
+  ]
+ },
+ {
+  "id": "slingpuck-2c",
+  "lv": 2,
+  "q": "Sling puck is a ___ game: both players shoot at the same time.",
+  "key": "fast",
+  "wrong": [
+   "slow",
+   "quiet",
+   "long"
+  ]
+ },
+ {
+  "id": "slingpuck-2d",
+  "lv": 2,
+  "q": "The pucks slide across the smooth ___.",
+  "key": "board",
+  "wrong": [
+   "wall",
+   "rope",
+   "net"
+  ]
+ },
+ {
+  "id": "slingpuck-2e",
+  "lv": 2,
+  "q": "You stretch the band. Then it ___ back.",
+  "key": "snaps",
+  "wrong": [
+   "breaks",
+   "drops",
+   "turns"
+  ]
+ },
+ {
+  "id": "slingpuck-3a",
+  "lv": 3,
+  "q": "Which sport uses a puck?",
+  "key": "ice hockey",
+  "wrong": [
+   "tennis",
+   "golf",
+   "badminton"
+  ]
+ },
+ {
+  "id": "slingpuck-3b",
+  "lv": 3,
+  "q": "A stretched band is tight. It is under ___.",
+  "key": "tension",
+  "wrong": [
+   "control",
+   "weight",
+   "attention"
+  ]
+ },
+ {
+  "id": "slingpuck-3c",
+  "lv": 3,
+  "q": "The puck shot across the board ___ a rocket.",
+  "key": "like",
+  "wrong": [
+   "as",
+   "than",
+   "so"
+  ]
+ },
+ {
+  "id": "slingpuck-3d",
+  "lv": 3,
+  "q": "A puck that cannot move at all is ___.",
+  "key": "stuck",
+  "wrong": [
+   "lost",
+   "free",
+   "sold"
+  ]
+ },
+ {
+  "id": "slingpuck-3e",
+  "lv": 3,
+  "q": "Good sling puck players have quick ___.",
+  "key": "reflexes",
+  "wrong": [
+   "reflections",
+   "reminders",
+   "records"
+  ]
+ }
+]

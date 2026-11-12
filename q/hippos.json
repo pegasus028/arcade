@@ -1,0 +1,167 @@
+[
+ {
+  "id": "hippos-1a",
+  "lv": 1,
+  "q": "You must be very ___ in Hungry Hippos.",
+  "key": "fast",
+  "wrong": [
+   "slow",
+   "quiet",
+   "sleepy"
+  ]
+ },
+ {
+  "id": "hippos-1b",
+  "lv": 1,
+  "q": "When you are hungry, you want to ___.",
+  "key": "eat",
+  "wrong": [
+   "sleep",
+   "run",
+   "play"
+  ]
+ },
+ {
+  "id": "hippos-1c",
+  "lv": 1,
+  "q": "In most games, how many hippos are on the board?",
+  "key": "four",
+  "wrong": [
+   "two",
+   "three",
+   "six"
+  ]
+ },
+ {
+  "id": "hippos-1d",
+  "lv": 1,
+  "q": "Which animal is bigger than a hippo?",
+  "key": "an elephant",
+  "wrong": [
+   "a horse",
+   "a cow",
+   "a lion"
+  ]
+ },
+ {
+  "id": "hippos-1e",
+  "lv": 1,
+  "q": "What colour is a real hippo usually?",
+  "key": "grey",
+  "wrong": [
+   "green",
+   "yellow",
+   "orange"
+  ]
+ },
+ {
+  "id": "hippos-2a",
+  "lv": 2,
+  "q": "Wild hippos live on which continent?",
+  "key": "Africa",
+  "wrong": [
+   "Asia",
+   "Australia",
+   "Europe"
+  ]
+ },
+ {
+  "id": "hippos-2b",
+  "lv": 2,
+  "q": "In Hungry Hippos, everyone plays at the ___ time.",
+  "key": "same",
+  "wrong": [
+   "next",
+   "last",
+   "different"
+  ]
+ },
+ {
+  "id": "hippos-2c",
+  "lv": 2,
+  "q": "The hippo ___ the marbles with its mouth.",
+  "key": "grabs",
+  "wrong": [
+   "throws",
+   "kicks",
+   "drops"
+  ]
+ },
+ {
+  "id": "hippos-2d",
+  "lv": 2,
+  "q": "The marbles ___ around the board.",
+  "key": "roll",
+  "wrong": [
+   "fly",
+   "swim",
+   "jump"
+  ]
+ },
+ {
+  "id": "hippos-2e",
+  "lv": 2,
+  "q": "Hippos spend hours in water to keep ___.",
+  "key": "cool",
+  "wrong": [
+   "warm",
+   "dry",
+   "awake"
+  ]
+ },
+ {
+  "id": "hippos-3a",
+  "lv": 3,
+  "q": "A baby hippo is called a ___.",
+  "key": "calf",
+  "wrong": [
+   "cub",
+   "kitten",
+   "puppy"
+  ]
+ },
+ {
+  "id": "hippos-3b",
+  "lv": 3,
+  "q": "Hippos mainly eat grass, so they are ___.",
+  "key": "herbivores",
+  "wrong": [
+   "carnivores",
+   "omnivores",
+   "predators"
+  ]
+ },
+ {
+  "id": "hippos-3c",
+  "lv": 3,
+  "q": "The game got very noisy and ___.",
+  "key": "chaotic",
+  "wrong": [
+   "silent",
+   "calm",
+   "boring"
+  ]
+ },
+ {
+  "id": "hippos-3d",
+  "lv": 3,
+  "q": "A hippo can open its mouth very ___.",
+  "key": "wide",
+  "wrong": [
+   "tall",
+   "long",
+   "deep"
+  ]
+ },
+ {
+  "id": "hippos-3e",
+  "lv": 3,
+  "q": "Wild hippos are dangerous, so keep your ___.",
+  "key": "distance",
+  "wrong": [
+   "eyes",
+   "place",
+   "time"
+  ]
+ }
+]

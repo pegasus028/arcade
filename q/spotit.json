@@ -1,0 +1,17 @@
+[
+{"id":"spotit-1a","lv":1,"q":"How many pictures do any two Spot it cards share?","key":"one","wrong":["two","three","four"]},
+{"id":"spotit-1b","lv":1,"q":"What shape are Spot it cards?","key":"round","wrong":["square","oval","triangular"]},
+{"id":"spotit-1c","lv":1,"q":"To win at Spot it, you must be ___.","key":"fast","wrong":["slow","quiet","late"]},
+{"id":"spotit-1d","lv":1,"q":"What does a clock tell you?","key":"the time","wrong":["the date","the weather","the way"]},
+{"id":"spotit-1e","lv":1,"q":"What colour is a ladybird usually?","key":"red","wrong":["blue","green","white"]},
+{"id":"spotit-2a","lv":2,"q":"In the classic game, how many pictures are on each card?","key":"eight","wrong":["six","seven","ten"]},
+{"id":"spotit-2b","lv":2,"q":"Before you deal, you ___ the cards to mix them.","key":"shuffle","wrong":["stack","count","throw"]},
+{"id":"spotit-2c","lv":2,"q":"You see the match and ___ out its name.","key":"call","wrong":["take","give","put"]},
+{"id":"spotit-2d","lv":2,"q":"Which word means a small drawing that stands for something?","key":"symbol","wrong":["letter","number","word"]},
+{"id":"spotit-2e","lv":2,"q":"Two things that match are ___.","key":"the same","wrong":["different","opposite","separate"]},
+{"id":"spotit-3a","lv":3,"q":"Where does a cactus usually grow?","key":"in the desert","wrong":["in the rainforest","in the ocean","in the Arctic"]},
+{"id":"spotit-3b","lv":3,"q":"What does a ship drop to stay in one place?","key":"an anchor","wrong":["a sail","a rope","a flag"]},
+{"id":"spotit-3c","lv":3,"q":"It's hard to ___ attention when everyone is shouting.","key":"pay","wrong":["do","take","make"]},
+{"id":"spotit-3d","lv":3,"q":"Which word means 'quick to notice small things'?","key":"observant","wrong":["patient","generous","polite"]},
+{"id":"spotit-3e","lv":3,"q":"A dolphin is not a fish. It is a ___.","key":"mammal","wrong":["reptile","bird","insect"]}
+]

@@ -1,0 +1,167 @@
+[
+ {
+  "id": "crocodile-1a",
+  "lv": 1,
+  "q": "How many legs does a crocodile have?",
+  "key": "four",
+  "wrong": [
+   "two",
+   "six",
+   "eight"
+  ]
+ },
+ {
+  "id": "crocodile-1b",
+  "lv": 1,
+  "q": "Where do most wild crocodiles live?",
+  "key": "in rivers",
+  "wrong": [
+   "in deserts",
+   "in mountains",
+   "in caves"
+  ]
+ },
+ {
+  "id": "crocodile-1c",
+  "lv": 1,
+  "q": "Where are your teeth?",
+  "key": "in your mouth",
+  "wrong": [
+   "in your nose",
+   "in your ears",
+   "in your cheeks"
+  ]
+ },
+ {
+  "id": "crocodile-1d",
+  "lv": 1,
+  "q": "What do you use to clean your teeth?",
+  "key": "a toothbrush",
+  "wrong": [
+   "a hairbrush",
+   "a paintbrush",
+   "a nail brush"
+  ]
+ },
+ {
+  "id": "crocodile-1e",
+  "lv": 1,
+  "q": "Crocodiles eat ___.",
+  "key": "meat",
+  "wrong": [
+   "grass",
+   "fruit",
+   "leaves"
+  ]
+ },
+ {
+  "id": "crocodile-2a",
+  "lv": 2,
+  "q": "First I go, then you go. We take ___.",
+  "key": "turns",
+  "wrong": [
+   "breaks",
+   "places",
+   "photos"
+  ]
+ },
+ {
+  "id": "crocodile-2b",
+  "lv": 2,
+  "q": "What do baby crocodiles come out of?",
+  "key": "eggs",
+  "wrong": [
+   "seeds",
+   "cocoons",
+   "pouches"
+  ]
+ },
+ {
+  "id": "crocodile-2c",
+  "lv": 2,
+  "q": "A doctor for your teeth is a ___.",
+  "key": "dentist",
+  "wrong": [
+   "vet",
+   "nurse",
+   "chemist"
+  ]
+ },
+ {
+  "id": "crocodile-2d",
+  "lv": 2,
+  "q": "What kind of animal is a crocodile?",
+  "key": "a reptile",
+  "wrong": [
+   "a mammal",
+   "a fish",
+   "an amphibian"
+  ]
+ },
+ {
+  "id": "crocodile-2e",
+  "lv": 2,
+  "q": "Be careful! Crocodile teeth are very ___.",
+  "key": "sharp",
+  "wrong": [
+   "soft",
+   "flat",
+   "weak"
+  ]
+ },
+ {
+  "id": "crocodile-3a",
+  "lv": 3,
+  "q": "The jaws snap shut. 'Snap shut' means they close ___.",
+  "key": "suddenly",
+  "wrong": [
+   "slowly",
+   "quietly",
+   "gently"
+  ]
+ },
+ {
+  "id": "crocodile-3b",
+  "lv": 3,
+  "q": "The jaws could close at any time. Every move is ___.",
+  "key": "risky",
+  "wrong": [
+   "safe",
+   "certain",
+   "easy"
+  ]
+ },
+ {
+  "id": "crocodile-3c",
+  "lv": 3,
+  "q": "Nobody knows which one is the bad one. It's all ___.",
+  "key": "luck",
+  "wrong": [
+   "skill",
+   "speed",
+   "practice"
+  ]
+ },
+ {
+  "id": "crocodile-3d",
+  "lv": 3,
+  "q": "Which animal is a close relative of the crocodile?",
+  "key": "the alligator",
+  "wrong": [
+   "the hippo",
+   "the otter",
+   "the frog"
+  ]
+ },
+ {
+  "id": "crocodile-3e",
+  "lv": 3,
+  "q": "Including wisdom teeth, a full adult set has ___ teeth.",
+  "key": "32",
+  "wrong": [
+   "20",
+   "24",
+   "36"
+  ]
+ }
+]
