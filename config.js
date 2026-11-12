@@ -1,7 +1,7 @@
 /* Arcade — shared settings for the student console and the leaderboard console. */
 
 /* Apps Script Web App /exec URL */
-window.API_URL = "PASTE_APPS_SCRIPT_EXEC_URL";
+window.API_URL = "https://script.google.com/macros/s/AKfycbxF2t6OrGUT4URiEQkJlyn5NBgUT08Wi8u7bGqxFeo0s7lSgZx75MgxlKTlRGISsvXt/exec";
 
 /* Club dates: every Friday from `first` to `last`, minus the holidays. Add a holiday as 'YYYY-MM-DD'. */
 window.CLUB = { first: "2026-11-13", last: "2027-02-26", holidays: ["2026-11-20"] };
